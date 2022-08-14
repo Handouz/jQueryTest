@@ -4,3 +4,23 @@ body{
 pre{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+table, th, td{
+    
+    border:2px solid green;
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+    padding: 15px;
+}
+th{
+    background-color: #888;
+}
+table img{
+height: 50%;
+width: 50%;
+}
+td img{
+    vertical-align: bottom;
+}
+.fill{
+    object-fit: fill;
+}

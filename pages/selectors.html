@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
     <title>jQuery selectors</title>
 </head>
 <body>
@@ -15,6 +16,24 @@
     <h4>Select elements by Name:</h4>
     <p>To select element by name just use the name of the element such as the following example:</p>
     <pre>$('p')</pre> <p>Here we selected all the p elements in the DOM</p>
+    <h4>Select element by Id:</h4>
+    <p>To select element by id just use the #Id_Of_The_Element (It's a bad practice).</p>
+    <pre>$('#id'):</pre><p>Selects the element with a specific id in the DOM</p>
+    <h4>Select element by Attribute:</h4>
+    <p>jQuery allows to select element based on a specific attribute, just put the attribute in a square brackets []</p>
+    <pre>$('[target]')</pre><p>Just select the elements that has the attribute (target).</p>
+    <p>We can also specify a value of an attribute in attribute selector.</p>
+    <p>For example: <pre>$('[target="_blank"]')</pre> it selects the elements that has an attribute (target) with value (_blank)</p>
+<table style="width:100%"class="selectors">
+    <tr>
+        <td><img class="fill" src="/images/selectors/01.png"></td>
+        <td><img src="/images/selectors/02.png"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/selectors/03.png"></td>
+        <td><img src="/images/selectors/04.png"></td>
+    </tr>
+</table>
 
 </body>
 </html>
