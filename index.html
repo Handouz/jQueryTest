@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jQuery tutorial</title>
+</head>
+
+<body>
+    <h1>jQuery Tutorial</h1>
+    <h2>What is jquery?</h2>
+    <p>It's a fast, small, and feature-rich javaScript library.</p>
+    <h2>jQuery important features:</h2>
+    <ul type="square">
+        <li>DOM selection:</li>
+        <pre>   jQuery provides selector to retrieve DOM element based on different criteria like tag name, id, css class name, attribute name, value, n<sup>th</sup> child in hierarchy ... etc.</pre>
+        <li>DOM manipulation:</li>
+        <pre>   It enables manipulating DOM, i.e, adding, removing elements from the DOM, modifying HTML content, CSS class etc.</pre>
+        <li>Special effects:</li>
+        <pre>   It enables applying special effects to the DOM elements like showing or hiding elements, fade-in or fade-out of visibility, sliding effects, animation etc.</pre>
+        <li>Events:</li>
+        <pre>   It includes functions that are equivalent to DOM events like click, dblclick, mouseenter, mouseover,....</pre>
+        <li>AJAX:</li>
+        <pre>   it includes easy to use AJAX functions to load data from servers without reloading whole page.</pre>
+        <li>Cross-browser support:</li>
+        <pre>   It handles the cross-browser issues.</pre>
+    </ul>
+    <h2>Advantages of jQuery:</h2>
+    <ul type="square">
+        <li>Easy to learn:</li>
+        <pre>   jQuery is easy to learn, since it supports javaScript style coding.</pre>
+        <li>Write less Do more:</li>
+        <pre>   it provides a rich set of features that increase developers' productivity by writin less and readable code.</pre>
+        <li>Excellent API documentaion:</li>
+        <pre>   it provides excellent online API documentaion.</pre>
+        <li>Cross-browser support:</li>
+        <pre>   It supposts Cross-browser without writing extra code.</pre>
+        <li>Unobtrusive:</li>
+        <pre>   It allows seperation of concerns by seperating HTML and jQuery code.</pre>
+    </ul>
+
+
+
+    <h3>Notes:</h3>
+    <ul type="square">
+        <li>
+            <ul>
+                <li>
+                    The difference between $(document).ready() and window.onload(): is that the $(document).ready()
+                    determines when the full DOM hierarchy is loaded
+                    whereas window.onload() event is raised whin the entire window is loaded including DOM, images, CSS
+                    and other required resources.
+                </li>
+                <li>The DOM loads before the entire window loads.</li>
+                <li>$(document).ready() doesn't wait for images to be loaded, it gets called as soon as DOM hierarchy is constructed fully.</li>
+            </ul>
+        </li>
+    </ul>
+    <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>
