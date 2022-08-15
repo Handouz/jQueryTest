@@ -1,13 +1,13 @@
-var script=document.createElement('script');
-script.setAttribute("src","https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
-//script.setAttribute("type","text/javascript");
-document.head.appendChild(script);
-console.log(script);
-setTimeout(function() {
-    // Add the rest of your code here, as we have to wait a moment before the document has jQuery as a part of it.
-    //$("body").html("<h1>It Works!</h1>");
-    console.log('Jquery was added');
-  }, 5000);
+// var script=document.createElement('script');
+// script.setAttribute("src","https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
+// //script.setAttribute("type","text/javascript");
+// document.head.appendChild(script);
+// console.log(script);
+// setTimeout(function() {
+//     // Add the rest of your code here, as we have to wait a moment before the document has jQuery as a part of it.
+//     //$("body").html("<h1>It Works!</h1>");
+//     console.log('Jquery was added');
+//   }, 5000);
 // window.onload=function(){
 //     alert('Window loaded');
 // }
