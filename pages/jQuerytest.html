@@ -23,6 +23,15 @@
     </div>
 
 
+    <div>
+        <form>
+            <label for="userName">User name:</label>
+            <input type="text" id="userName" placeholder="Enter name">
+            <input type="submit" onclick="submithandler()" value="submit">
+        </form>
+    </div>
+
+
     <script>
         var divs=$('div');
         console.log(divs);
@@ -33,6 +42,14 @@
         // $('div').remove();
         divs=$('div');
         console.log(divs);
+        $('<p>This is using appendTo Method</p>').appendTo('mainDiv label');//this will append the p element to the label element
+       console.log( $('div').html());
+       console.log($(divs[1]).attr('id'))
+    //    console.log($('div').)
+    function submithandler()
+    {
+        alert('Hello '+$('[type="text"]').val());
+    }
     </script>
 </body>
 </html>
