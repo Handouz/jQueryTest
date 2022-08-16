@@ -1,12 +1,15 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery test</title>
+    <link rel="stylesheet" href="/styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
+
 <body>
     <h1>jQuery test</h1>
     <pre>
@@ -19,7 +22,7 @@
         wrap(): wrap an HTML structure around each element.
     </pre>
     <div id="mainDiv">
-        <label for="" ><strong>This is the main div</strong></label>
+        <label for=""><strong>This is the main div</strong></label>
     </div>
 
 
@@ -32,24 +35,59 @@
     </div>
 
 
+
+    <div id="testcss" class="testcss">
+        <input type="button" id="testcssbutton" value="toggle css" >
+        <!-- onclick="toggleCss()" onmouseover="mouseOver()" onmouseleave="mouseLeave()"> -->
+    </div>
+
+
     <script>
-        var divs=$('div');
-        console.log(divs);
-        $('div').prepend('<p>This is a prepended paragraph</p>');
-        $('div').append('<mark>This is appended text</mark>');
-        $('div').before('<div id="beforeDiv">This is the before div</div>');
-        $('div').after('<p>This is the after paragraph</p>');
+        // var divs = $('div');
+        // console.log(divs);
+        // $('div').prepend('<p>This is a prepended paragraph</p>');
+        // $('div').append('<mark>This is appended text</mark>');
+        // $('div').before('<div id="beforeDiv">This is the before div</div>');
+        // $('div').after('<p>This is the after paragraph</p>');
         // $('div').remove();
-        divs=$('div');
-        console.log(divs);
-        $('<p>This is using appendTo Method</p>').appendTo('mainDiv label');//this will append the p element to the label element
-       console.log( $('div').html());
-       console.log($(divs[1]).attr('id'))
-    //    console.log($('div').)
-    function submithandler()
-    {
-        alert('Hello '+$('[type="text"]').val());
-    }
+        // divs = $('div');
+        // console.log(divs);
+        // $('<p>This is using appendTo Method</p>').appendTo('mainDiv label');//this will append the p element to the label element
+        // console.log($('div').html());
+        // console.log($(divs[1]).attr('id'))
+        //    console.log($('div').)
+        function submithandler() {
+            alert('Hello ' + $('[type="text"]').val());
+        }
+
+        $('#testcss').append('Div content here').attr('style', 'padding:10px;margin:10px;');
+        function toggleCss() {
+            $('#testcss').toggleClass('testcssModified');
+        }
+        $('pre').append('    this is appended text');
+        $('form label').text('Hi');//changing the word 'User name:' with the word 'Hi'
+        function mouseOver() {
+
+            $('#testcss').animate({
+                height: '200px',
+                width: '200px'
+            }, 5000);
+
+        }
+        function mouseLeave() {
+            $('#testcss').stop();
+        }
+        $('#testcssbutton').click(toggleCss)
+            .mouseover(function () {
+                $('#testcss').animate({
+                    height: '200px',
+                    width: '200px'
+                }, 5000);
+            }).mouseleave(function(){
+                $('#testcss').stop();
+            })
+
     </script>
 </body>
+
 </html>

@@ -1,26 +1,46 @@
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-pre{
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-table, th, td{
-    
-    border:2px solid green;
+
+pre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table,
+th,
+td {
+
+    border: 2px solid green;
     /* border-collapse: collapse; */
     border-radius: 10px;
     padding: 15px;
 }
-th{
+
+th {
     background-color: #888;
 }
-table img{
-height: 50%;
-width: 50%;
+
+table img {
+    height: 50%;
+    width: 50%;
 }
-td img{
+
+td img {
     vertical-align: bottom;
 }
-.fill{
+
+.fill {
     object-fit: fill;
+}
+
+
+.testcss {
+    background-color: gold;
+    color: white;
+    font-weight: bold;
+}
+.testcssModified {
+    background-color: green;
+    color: black;
+    font-weight:normal;
 }
