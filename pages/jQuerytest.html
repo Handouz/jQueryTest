@@ -7,6 +7,12 @@
     <title>jQuery test</title>
     <link rel="stylesheet" href="/styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/42fd2dc0a1.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
 
 </head>
 
@@ -21,14 +27,17 @@
         replaceAll(): replace target element(s) with specified element.
         wrap(): wrap an HTML structure around each element.
     </pre>
+    <i class="fab fa-accessible-icon"></i>
+    <i class="far fa-address-book"></i><i class="fas fa-archway "></i>
     <div id="mainDiv">
+
         <label for=""><strong>This is the main div</strong></label>
     </div>
 
 
     <div>
         <form>
-            <label for="userName">User name:</label>
+            <label for="userName"><i class="fa-solid fa-angles-right"></i> User name: </label>
             <input type="text" id="userName" placeholder="Enter name">
             <input type="submit" onclick="submithandler()" value="submit">
         </form>
@@ -37,10 +46,23 @@
 
 
     <div id="testcss" class="testcss">
-        <input type="button" id="testcssbutton" value="toggle css" >
+        <input type="button" id="testcssbutton" value="toggle css">
         <!-- onclick="toggleCss()" onmouseover="mouseOver()" onmouseleave="mouseLeave()"> -->
     </div>
+    <div>
+        <button id="btnHideDive" onclick="doconfirm()">Hide</button>
+    </div>
+    <div id="hideDiv">
+        this is a div to be hidden.
+    </div>
 
+    <div id="msgDiv">
+
+    </div>
+
+    <div id="myDiv">
+        This is the myDiv element.
+    </div>
 
     <script>
         // var divs = $('div');
@@ -56,6 +78,76 @@
         // console.log($('div').html());
         // console.log($(divs[1]).attr('id'))
         //    console.log($('div').)
+
+
+
+        function toggleHideDiv() {
+            if ($('#btnHideDive').text() == 'Hide') {
+                if (confirm('Are you sure to hide the div?')) {
+
+                }
+            }
+            else {
+                $('#hideDiv').show();
+                $('#btnHideDive').text("Hide");
+            }
+
+        }
+
+        function doconfirm() {
+            if ($('#btnHideDive').text() == 'Hide') {
+                $.confirm({
+                    title: 'What is up?',
+                    content: 'Here goes a little content',
+                    type: 'green',
+                    buttons: {
+                        ok: {
+                            text: "ok!",
+                            columnClass:'col-md-4 col-md-offset-4',
+                            btnClass: 'btn-primary',
+                            keys: ['enter'],
+                            action: function () {
+                                $('#hideDiv').hide();
+                                $('#btnHideDive').text("Show");
+                            }
+                        },
+                        cancel: function () {
+                            
+                        }
+                    }
+                });
+
+            }
+            else {
+                $.confirm({
+                    title: 'What is up?',
+                    content: 'Here goes a little content',
+                    type: 'green',
+                    buttons: {
+                        ok: {
+                            text: "ok!",
+                            btnClass: 'btn-primary',
+                            keys: ['enter'],
+                            action: function () {
+                                $('#hideDiv').show();
+                                $('#btnHideDive').text("Hide");
+                            }
+                        },
+                        cancel: function () {
+                            
+                        }
+                    }
+                });
+            }
+        }
+
+
+
+
+
+
+
+
         function submithandler() {
             alert('Hello ' + $('[type="text"]').val());
         }
@@ -65,7 +157,7 @@
             $('#testcss').toggleClass('testcssModified');
         }
         $('pre').append('    this is appended text');
-        $('form label').text('Hi');//changing the word 'User name:' with the word 'Hi'
+        // $('form label').text('Hi');//changing the word 'User name:' with the word 'Hi'
         function mouseOver() {
 
             $('#testcss').animate({
@@ -77,16 +169,38 @@
         function mouseLeave() {
             $('#testcss').stop();
         }
-        $('#testcssbutton').click(toggleCss)
-            .mouseover(function () {
-                $('#testcss').animate({
-                    height: '200px',
-                    width: '200px'
-                }, 5000);
-            }).mouseleave(function(){
-                $('#testcss').stop();
-            })
+        // $('#testcssbutton').click(toggleCss)
+        //     .mouseover(function () {
+        //         $('#testcss').animate({
+        //             height: '200px',
+        //             width: '200px'
+        //         }, 5000);
+        //     }).mouseleave(function () {
+        //         $('#testcss').stop();
+        //     })
+        // $('#testcss').click(function (eventObj) {
+        //     alert(eventObj.pageX + ' ' + eventObj.pageY)
+        // })
 
+        // $('#myDiv').animate({
+        //     height: '200px',
+        //     width: '200px'
+        // },
+        //     {    // options parameter
+        //         duration: 5000,
+        //         complete: function () {
+        //             $(this).animate({
+        //                 height: '100px',
+        //                 width: '100px'
+        //             }, 5000,
+        //                 function () {
+        //                     $('#msgDiv').text('Animation completed..');
+        //                 });
+        //         },
+        //         start: function () {
+        //             $('#msgDiv').append('starting animation..');
+        //         }
+        //     });
     </script>
 </body>
 
